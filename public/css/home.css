@@ -1,0 +1,178 @@
+/*----- banner -----*/
+.home .banner{
+    width: 100%; 
+    padding-bottom: 10px;
+}
+
+/*---------- main ----------*/
+.home{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px; 
+}
+
+.home .productos{
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    align-items: center;
+    padding: 0 10px;
+}
+
+.home .productos h3{
+    font-size: 24px; 
+    color: var(--color-gris-oscuro); 
+    margin: 20px 0 10px; 
+    align-self: flex-start;
+    font-weight: 400;
+}
+
+.home .productos h4{
+    font-weight: 400;
+ }
+
+.home .productos article{
+    width: 100%; 
+    background-color: rgb(255, 255, 255); 
+    margin: 18px 0 28px; 
+}
+
+.home .productos article img{
+    width: 100%; 
+    position: relative;
+}
+
+.home .productos article .caja{
+    border-top: 1px solid var(--color-gris-claro); 
+    position: relative;
+}
+
+.home .productos article .caja i{
+    display: block ;
+    font-size: 16px ;
+    padding: 5px ;
+    width: 30px ;
+    height: 30px ;
+    border: 1px solid #39b54a ;
+    background-color: #FFF ;
+    border-radius: 50% ;
+    position:absolute ;
+    right: 20px ;
+    top: -15px ;
+}
+
+.home .productos article .caja .fa-truck{
+    color: var(--color-verde); 
+}
+
+.home .productos article .caja .precio-oferta{
+    display: flex;
+    width: 100%;
+    height: 22px;
+    margin: 18px 0;
+}
+
+.home .productos article .caja p{
+    font-size: 18px; 
+    width: 30%;
+    margin-left: 6%;
+}
+
+.home .productos article .caja span{
+    display: flex; 
+    font-size: 16px; 
+    color: var(--color-verde); 
+    width: 70%;
+    align-items: center;
+}
+
+.home .productos article .caja .descripcion{
+    font-size: 16px; 
+    color: var(--color-gris-oscuro); 
+    padding-bottom: 18px;
+    margin-left: 6%;
+}
+
+
+@media (min-width: 426px){
+/*---------- main ----------*/
+    .home {
+        padding-bottom: 40px;
+    }
+     .home .productos{ 
+        padding: 0 40px;
+    }
+     .home .productos div{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+     .home .productos article{
+        width: 45%;
+        box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 ); 
+    }
+     .home .productos article .caja span {
+        align-items: flex-start;
+        padding-top: 2px;
+        width: 50%;
+    }
+}
+
+
+@media (min-width: 769px){
+/*---------- main ----------*/   
+    .home {
+        padding-bottom: 60px;
+    } 
+    .home .productos{
+        padding: 0px 50px;
+    }
+    .home .productos h3 {
+        margin: 40px 0 15px;
+    }
+     .home .productos article{
+         width: 22%; 
+         box-shadow : none
+    }
+    .home .productos article .caja .descripcion{
+        display: none;  
+    }
+    .home .productos article:hover{
+        box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 ), 0px 35px 10px rgb( 100 , 100 , 100 );
+    }
+    .home .productos article:hover .caja .descripcion{
+        display: block;
+        position:absolute;
+        top: 56px;
+        width: 100%;
+        background-color: white;
+        padding-left: 15px;
+        margin: 0;
+    }
+    .home .productos article .caja i{
+        transition: girar 0.5s;
+    }
+    
+   
+    @keyframes girar {
+        0%{
+            transform: rotate(0deg);
+        }
+        50%{
+            transform: rotate(360deg)
+        }
+        100%{
+            transform: rotate(0geg);
+        }
+    }
+
+    .home .productos article .caja:hover i{
+        animation-name: girar;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+   
+}
+
+

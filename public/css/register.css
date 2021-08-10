@@ -1,0 +1,212 @@
+.register{
+    display: flex;
+    justify-content: center;
+    color: var(--color-gris-oscuro);
+
+}
+.register form{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    background-color: white;
+    border-radius: 5px;
+    margin: 25px 0; 
+}
+
+.register form .datos{
+    align-self: center;
+    margin: 20px 0;
+}
+
+.register .title{
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--color-celeste);
+    font-weight: 400;
+}
+
+.register .datos input{
+    border: 1px solid currentcolor;
+    border-radius: 5px;
+}
+.register .datos input:focus {
+    background-color: var(--color-gris-claro);
+}
+
+.register label{
+    font-size: 13px;
+    color: #000;
+}
+
+.register .datos .datos-personales{
+    margin: 18px 0;
+}
+
+.register .datos .datos-personales input{
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+.fecha-nac input{
+    color: var(--color-gris-oscuro);
+}
+
+.register .datos .perfil{
+    margin: 10px 0 15px;
+}
+
+.register .datos .perfil .perfiles div{
+    margin-top: 5px;
+    padding-left: 15px;
+}
+
+.register .datos .interes{
+    margin: 18px 0;
+}
+
+.register .datos .intereses div{
+    margin-top: 5px;
+    padding-left: 15px;
+}
+
+.register .datos .perfil .perfiles div label,
+.register .datos .intereses div label{
+    color: var(--color-gris-oscuro);
+}
+
+.register .datos .foto{
+    margin: 20px 0;
+}
+
+.register .datos .foto input{
+    font-size: 11px;
+    color: transparent;
+}
+
+.register .datos .contraseña{
+    margin: 20px 0 35px;
+}
+
+.register .datos .contraseña input{
+    padding: 5px;
+    margin: 5px 0;
+}
+
+.register .datos .enviar-borrar{
+    text-align: end;
+    margin-top: 30px;
+}
+.register .datos .enviar-borrar button{
+    margin-right: 5px;
+    background-color: var(--color-celeste);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 3px 6px;
+}
+
+
+@media (min-width: 426px){
+    .register form{
+        width: 90%;
+        margin: 40px 0;
+    }
+    .register form .datos { 
+        width: 90%;
+        margin: 30px 0;
+        padding-left: 10px;
+    }
+    .register .title{
+        font-size: 18px;
+    }
+    .register .datos .datos-personales{
+        display: flex;
+        width: 100%;  
+        margin: 25px 0;
+    }
+    .register .datos .datos-personales .dato-sub{
+        width: 50%;
+    }
+    .register .datos .datos-personales input{
+        width: 97%;
+        margin: 5px 0;
+    }
+    .register .datos .foto label{
+        margin-right: 10px;
+    }
+    .register .datos .perfil {
+        margin: 25px 0;
+    }
+    .register .datos .perfil  div, 
+    .register .datos .interes div{
+        display: flex;
+        padding-left: 16px;
+        padding-top: 5px;
+    }
+    .register .datos .perfil div label, 
+    .register .datos .interes div label{
+        padding-left: 6px;
+    }
+    .register .datos .foto, 
+    .register .datos .contraseña{
+        display: flex;
+    }
+    .register .datos .contraseña{
+        width: 52%;
+        justify-content: space-between;
+        margin: 28px 0 35px;
+    }
+    .register .datos .foto {
+        margin: 25px 0;
+    }
+    .register .datos .enviar-borrar button{
+        padding: 3px 10px;
+        margin-left: 8px;
+    }
+    .register .datos .enviar-borrar button:hover{
+        background-color: #0022AA;
+        transition-duration: 0.5s;
+    }
+}
+
+
+@media (min-width: 769px){
+    .register form{
+        width: 80%;
+    }
+    .register .title{
+        font-size: 24px;
+        margin-bottom: 22px;
+    }
+    .register label, 
+    .register .datos .dato-sub div input, 
+    .register .datos .contraseña div input{
+        font-size: 15px;
+    }
+    .register .datos .foto input{
+        font-size: 13px;
+    }
+    .register .datos .contraseña{
+        width: 49%;
+    }
+    .register .datos .enviar-borrar button{
+        font-size: 15px;
+        padding: 6px 22px;
+        margin-left: 8px;
+    }
+}  
+
+@media (min-width: 1025px){
+    .register form{
+        width: 65%;
+        margin: 55px 0;
+    }
+    .register .title {
+        margin-bottom: 28px;
+    }
+    .register .datos .contraseña {
+        width: 46%;
+    }
+}
